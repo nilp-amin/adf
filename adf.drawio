@@ -1,0 +1,240 @@
+<mxfile host="app.diagrams.net" modified="2024-04-03T03:04:36.287Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="10mM7iMfxSrgmuW8zk_-" version="24.2.1" type="device">
+  <diagram name="Page-1" id="9Xf1JJKaoTDQQPh1tQwb">
+    <mxGraphModel dx="1762" dy="1280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-1" value="Proximity Node" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="100" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-13" value="&lt;b&gt;External Library:&lt;/b&gt;&lt;div&gt;- gpiozero&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-1">
+          <mxGeometry y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-14" value="&lt;b&gt;Service:&lt;/b&gt;&lt;div&gt;- DogClose (checks if dog is close to ADF)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-1">
+          <mxGeometry y="120" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-15" value="&lt;b&gt;Sensors:&lt;/b&gt;&lt;div&gt;- Passive Infra Red (PIR)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-1">
+          <mxGeometry y="30" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-2" value="Vision Node" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-9" value="&lt;b&gt;External ROS2 Packages:&lt;/b&gt;&lt;div&gt;- openrobotics_darknet_ros (CNN)&lt;/div&gt;&lt;div&gt;- image_tools&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
+          <mxGeometry y="70" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-10" value="&lt;b&gt;Subscribers&lt;/b&gt;:&lt;div&gt;- /image [sensor_msgs/msg/Image]&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
+          <mxGeometry y="190" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-12" value="&lt;b&gt;Service:&lt;/b&gt;&lt;div&gt;- DogVisible (is the dog visible in the camera frame)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
+          <mxGeometry y="140" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-16" value="&lt;b&gt;Sensors:&lt;/b&gt;&lt;div&gt;- Raspberry Pi Camera&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
+          <mxGeometry y="30" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-3" value="Dispense Node" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="390" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-17" value="&lt;b&gt;Actuators:&lt;/b&gt;&lt;div&gt;- Servo x2&lt;/div&gt;&lt;div&gt;- Force Sensors x2&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-3">
+          <mxGeometry x="5" y="30" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-24" value="&lt;b&gt;External Library:&lt;/b&gt;&lt;div&gt;- gpiozero&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-3">
+          <mxGeometry x="5" y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-25" value="&lt;b&gt;Service:&lt;/b&gt;&lt;div&gt;- Feed (open and close servo for dispensing food and water so it is full)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-3">
+          <mxGeometry x="5" y="120" width="345" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-4" value="Task Manager Node" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-200" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-27" value="&lt;b&gt;External ROS2 Packages:&lt;/b&gt;&lt;div&gt;- YASMIN&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-4">
+          <mxGeometry y="30" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-28" value="&lt;b&gt;Clients:&lt;/b&gt;&lt;br&gt;&lt;div&gt;- DogClose (checks if dog is close to ADF)&lt;/div&gt;&lt;div&gt;- DogVisible (is the dog visible in the camera frame)&lt;/div&gt;&lt;div&gt;- Feed (open and close servo for dispensing food and water so it is full)&lt;/div&gt;&lt;div&gt;- Record (to start or stop recording video feed)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-4">
+          <mxGeometry y="70" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-19" value="Recorder Node" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="390" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-21" value="&lt;b&gt;Service:&lt;/b&gt;&lt;div&gt;- Record (to start or stop recording video feed)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-19">
+          <mxGeometry y="40" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-23" value="&lt;b&gt;Subscribers&lt;/b&gt;:&lt;div&gt;- /image [sensor_msgs/msg/Image]&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-19">
+          <mxGeometry y="90" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-26" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Assumptions:&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. The sensors are wired up to the pins that are defined in the software.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. The proximity sensor is positioned in a manner so that it can clearly detect motion close to the ADF.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. The camera is positioned so it is looking down at the food and water bowls. So that it is able to record the dog eating the food and is able to detect if it is not there anymore. The camera position will also be such that the dog can be seen coming from a short distance away.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4. The mechanism for dispensing the food and water is not of concern. It should be designed such that when servo is at max angle, food/water is dispensed, and when it is at minimum angle no food/water is dispensed.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;5. The force sensors are placed directly under the food/water bowls to detect their mass. The mass of a approx full water and food bowl is required beforehand.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;6. No logic is implemented to stop the dog from continuously eating throughout the day. This would need to be added seperatly to stop the dog from getting obese.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;7. There is always enough food and water in the ADF ready to be dispenesed.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="800" y="100" width="350" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-29" target="dyJRUW8BcSIrCMlU8a8Q-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-29" value="Start" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="285" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-30" target="dyJRUW8BcSIrCMlU8a8Q-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-30" value="Check PIR reading" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-31" target="dyJRUW8BcSIrCMlU8a8Q-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-31" target="dyJRUW8BcSIrCMlU8a8Q-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="1000" />
+              <mxPoint x="450" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-31" value="Movement?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-34" target="dyJRUW8BcSIrCMlU8a8Q-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-34" value="Check CNN detected labels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-36" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1030" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-38" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="970" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-39" target="dyJRUW8BcSIrCMlU8a8Q-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-39" value="Dog?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-41" target="dyJRUW8BcSIrCMlU8a8Q-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-41" value="Check food load cell" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-43" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-45" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-46" target="dyJRUW8BcSIrCMlU8a8Q-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-46" target="dyJRUW8BcSIrCMlU8a8Q-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-46" value="&amp;lt; threshold" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-48" target="dyJRUW8BcSIrCMlU8a8Q-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-48" value="Open food servo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-51" target="dyJRUW8BcSIrCMlU8a8Q-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-51" value="Close food servo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-53" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1470" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-54" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1410" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-55" target="dyJRUW8BcSIrCMlU8a8Q-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-55" value="Check water load cell" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-57" target="dyJRUW8BcSIrCMlU8a8Q-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-57" target="dyJRUW8BcSIrCMlU8a8Q-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-57" value="&amp;lt; threshold" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1730" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-61" target="dyJRUW8BcSIrCMlU8a8Q-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-61" value="Open water servo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-64" target="dyJRUW8BcSIrCMlU8a8Q-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-64" value="Close water servo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1860" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-66" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1800" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-67" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1740" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-68" target="dyJRUW8BcSIrCMlU8a8Q-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-68" value="Start recording camera feed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-70" target="dyJRUW8BcSIrCMlU8a8Q-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-70" value="Check CNN detected labels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="2060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-72" target="dyJRUW8BcSIrCMlU8a8Q-70">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="2190" />
+              <mxPoint x="480" y="2090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-72" target="dyJRUW8BcSIrCMlU8a8Q-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-72" value="Dog?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="2150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-75" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="2160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-76" target="dyJRUW8BcSIrCMlU8a8Q-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-76" value="Wait 5s" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="2270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-78" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="2220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-79" target="dyJRUW8BcSIrCMlU8a8Q-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="2410" />
+              <mxPoint x="240" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-79" value="Stop recording camera feed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="2380" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
