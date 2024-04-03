@@ -2,27 +2,27 @@
 #define VISION_HPP
 
 #include <rclcpp/rclcpp.hpp>
-#include <rclcpp_action/rclcpp_action.hpp>
-#include <sensor_msgs/msg/image.hpp>
-
-#include "darknet_ros_msgs/action/check_for_objects.hpp"
+#include <darknet_ros_msgs/msg/bounding_boxes.hpp>
+#include "vision/srv/dog_in_vision.hpp"
 
 class Vision : public rclcpp::Node
 {
 public:
-    Vision();
+    Vision(const std::string& bounding_box_topic, const std::string& dog_srv_name);
 
 private:
-    void camera_callback(const sensor_msgs::msg::Image& msg);   //!< the camera feed callback
+    void bounding_box_callback(const darknet_ros_msgs::msg::BoundingBoxes& msg);   //!< the bounding boxes callback
 
-    bool check_for_dog();    //!< used to trigger darknet action server
+    void is_dog_in_vision(const std::shared_ptr<vision::srv::DogInVision::Request> request,
+                          const std::shared_ptr<vision::srv::DogInVision::Response> response);
 
 private:
-    sensor_msgs::msg::Image curr_image_;    //!< the current image from camera
+    rclcpp::Service<vision::srv::DogInVision>::SharedPtr dog_in_vision_srv_;    //!< service which tells client if dog is in camera frame
 
-    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr camera_sub_;   //!< sub camera feed
+    rclcpp::Subscription<darknet_ros_msgs::msg::BoundingBoxes>::SharedPtr bounding_box_sub_;   //!< sub to darknet_ros bounding boxes 
 
-    rclcpp_action::Client<darknet_ros_msgs::action::CheckForObjects>::SharedPtr check_object_action_;     //!< action client to check for dog
+private:
+    bool dog_in_vision_;     //!< is a dog in the vision of the camera
 };
 
 

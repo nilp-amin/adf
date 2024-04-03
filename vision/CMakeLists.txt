@@ -8,14 +8,17 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rclcpp_action REQUIRED)
-find_package(sensor_msgs REQUIRED)
 find_package(darknet_ros_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/DogInVision.srv"
+)
 
 add_executable(vision_node src/vision_node.cpp src/vision.cpp include/vision/vision.hpp)
 ament_target_dependencies(vision_node 
   rclcpp 
-  rclcpp_action
   sensor_msgs
   darknet_ros_msgs
 )
@@ -25,8 +28,12 @@ target_include_directories(vision_node PUBLIC
   $<INSTALL_INTERFACE:include>)
 target_compile_features(vision_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
+
 install(TARGETS vision_node
   DESTINATION lib/${PROJECT_NAME})
+
+rosidl_target_interfaces(vision_node
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -43,4 +50,5 @@ endif()
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
 
 ament_export_include_directories(include)
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()
