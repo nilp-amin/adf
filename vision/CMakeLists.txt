@@ -8,12 +8,16 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(darknet_ros_msgs REQUIRED)
 
 add_executable(vision_node src/vision_node.cpp src/vision.cpp include/vision/vision.hpp)
 ament_target_dependencies(vision_node 
   rclcpp 
+  rclcpp_action
   sensor_msgs
+  darknet_ros_msgs
 )
 
 target_include_directories(vision_node PUBLIC
