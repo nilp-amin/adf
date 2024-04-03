@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-03T03:04:36.287Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="10mM7iMfxSrgmuW8zk_-" version="24.2.1" type="device">
+<mxfile host="app.diagrams.net" modified="2024-04-03T07:53:14.119Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="iWi3a37DX0FFnj5uvisf" version="24.2.1" type="device">
   <diagram name="Page-1" id="9Xf1JJKaoTDQQPh1tQwb">
-    <mxGraphModel dx="1762" dy="1280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1762" dy="1279" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,7 +22,7 @@
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-9" value="&lt;b&gt;External ROS2 Packages:&lt;/b&gt;&lt;div&gt;- openrobotics_darknet_ros (CNN)&lt;/div&gt;&lt;div&gt;- image_tools&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
           <mxGeometry y="70" width="210" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-10" value="&lt;b&gt;Subscribers&lt;/b&gt;:&lt;div&gt;- /image [sensor_msgs/msg/Image]&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-10" value="&lt;b&gt;Subscribers&lt;/b&gt;:&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- /darknet_ros/bound_boxes&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
           <mxGeometry y="190" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-12" value="&lt;b&gt;Service:&lt;/b&gt;&lt;div&gt;- DogVisible (is the dog visible in the camera frame)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-2">
@@ -118,9 +118,6 @@
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-41" value="Check food load cell" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="285" y="1300" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-43" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="325" y="1260" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-45" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="360" y="1190" width="60" height="30" as="geometry" />
@@ -233,6 +230,68 @@
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-79" value="Stop recording camera feed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="285" y="2380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-82" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="830" width="350" height="230" as="geometry">
+            <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-83" value="&lt;b&gt;Proximity Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-82">
+          <mxGeometry y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-86" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1070" width="350" height="210" as="geometry">
+            <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-87" value="&lt;b&gt;Vision Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-86">
+          <mxGeometry y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-86" target="dyJRUW8BcSIrCMlU8a8Q-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-89" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1290" width="470" height="640" as="geometry">
+            <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-90" value="&lt;b&gt;Dispenser Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-89">
+          <mxGeometry y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-92" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1940" width="400" height="100" as="geometry">
+            <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-93" value="&lt;b&gt;Recorder Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-92">
+          <mxGeometry y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-95" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="740" width="530" height="1750" as="geometry">
+            <mxRectangle x="100" y="740" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-96" value="&lt;b&gt;Task Manager Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
+          <mxGeometry y="20" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-100" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
+          <mxGeometry x="30" y="1620" width="400" height="100" as="geometry">
+            <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-101" value="&lt;b&gt;Recorder Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-100">
+          <mxGeometry y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-103" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
+          <mxGeometry x="30" y="1310" width="400" height="200" as="geometry">
+            <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-104" value="&lt;b&gt;Vision Node&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-103">
+          <mxGeometry y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-43" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
+          <mxGeometry x="230" y="510" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
