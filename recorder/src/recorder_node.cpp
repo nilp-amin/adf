@@ -1,10 +1,12 @@
-#include <cstdio>
+#include <recorder/recorder.hpp>
 
-int main(int argc, char ** argv)
+int main(int argc, char** argv)
 {
-  (void) argc;
-  (void) argv;
+  rclcpp::init(argc, argv);
 
-  printf("hello world recorder package\n");
+  std::string camera_topic{"/image"};
+  rclcpp::spin(std::make_shared<Recorder>(camera_topic));
+
+  rclcpp::shutdown();
   return 0;
 }

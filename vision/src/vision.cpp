@@ -9,7 +9,7 @@ Node("vision_node"), dog_in_vision_{false}
         dog_srv_name, std::bind(&Vision::is_dog_in_vision, this, std::placeholders::_1, std::placeholders::_2)
     );
 
-    // create subscriber to camera feed
+    // create subscriber to bounding box output of darknet_ros 
     bounding_box_sub_ = this->create_subscription<darknet_ros_msgs::msg::BoundingBoxes>(
         bounding_box_topic, 1, std::bind(&Vision::bounding_box_callback, this, std::placeholders::_1)
     );

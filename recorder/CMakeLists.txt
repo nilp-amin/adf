@@ -7,11 +7,18 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
-add_executable(recorder_node src/recorder_node.cpp)
+add_executable(recorder_node 
+  src/recorder_node.cpp
+  src/recorder.cpp
+  include/recorder/recorder.hpp
+)
+ament_target_dependencies(recorder_node 
+  rclcpp 
+  sensor_msgs
+)
 target_include_directories(recorder_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
@@ -32,4 +39,5 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+ament_export_include_directories(include)
 ament_package()

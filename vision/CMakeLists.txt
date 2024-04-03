@@ -11,18 +11,19 @@ find_package(rclcpp REQUIRED)
 find_package(darknet_ros_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
-
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/DogInVision.srv"
 )
-
-add_executable(vision_node src/vision_node.cpp src/vision.cpp include/vision/vision.hpp)
+add_executable(vision_node 
+  src/vision_node.cpp
+  src/vision.cpp 
+  include/vision/vision.hpp
+)
 ament_target_dependencies(vision_node 
   rclcpp 
   sensor_msgs
   darknet_ros_msgs
 )
-
 target_include_directories(vision_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
