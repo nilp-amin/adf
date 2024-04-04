@@ -14,19 +14,21 @@ class ProximityService(Node):
             parameters=[
                 ("pir_pin", 4),
                 ("pir_threshold", 0.5),
+                ("service_name", "motion")
             ]
         )
 
         # set config parameters for use
         pir_pin = self.get_parameter("pir_pin").value
         pir_threshold = self.get_parameter("pir_threshold").value
+        service_name = self.get_parameter("service_name").value
 
         # setup the PIR sensor
         self.pir = MotionSensor(pin=pir_pin,
                                 threshold=pir_threshold)
 
         # setup service to check if motion has been detected
-        self.srv = self.create_service(Motion, "motion", self.motion_callback)
+        self.srv = self.create_service(Motion, service_name, self.motion_callback)
 
     def motion_callback(self, request, response):
         response.motion_detected = self.pir.motion_detected() 
