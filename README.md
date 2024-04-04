@@ -149,3 +149,6 @@ The reliablity and robustness of the software needs to be tested. A variety of f
 ## Performance Testing
 The softwares performance under various conditions, such as different load levels, feeding frequencies, and environmental factors need to be tested. Performance tests need to measure response times, throughput, and resource usage to ensure the software can handle expected workloads efficiently.
 
+## User Testing
+The software needs to be tested in the actual environment and observations need to be made about how the user interacts with the system and with an actual dog. This will provide information in how the angle of the camera might need to be positioned and any other changes to the FSM which were overseen when designing external to the user.
+
