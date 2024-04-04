@@ -8,8 +8,8 @@
 class Vision : public rclcpp::Node
 {
 public:
-    Vision(const std::string& bounding_box_topic, 
-           const std::string& dog_srv_name);
+    Vision();
+           
 
 private:
     void bounding_box_callback(const darknet_ros_msgs::msg::BoundingBoxes& msg);   //!< the bounding boxes callback
@@ -23,6 +23,8 @@ private:
     rclcpp::Subscription<darknet_ros_msgs::msg::BoundingBoxes>::SharedPtr bounding_box_sub_;   //!< sub to darknet_ros bounding boxes 
 
 private:
+    std::string bounding_box_topic_;    //!< the topic name for darknet_ros bounding boxes
+    std::string dog_srv_name_;      //!< the dog in vision service name
     bool dog_in_vision_;     //!< is a dog in the vision of the camera
 };
 

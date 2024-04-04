@@ -1,17 +1,23 @@
 #include "vision/vision.hpp"
 
-Vision::Vision(const std::string& bounding_box_topic,
-               const std::string& dog_srv_name) : 
-Node("vision_node"), dog_in_vision_{false}
+Vision::Vision() : Node("vision_node"), dog_in_vision_{false}
 {
+    // declare config parameters to be able to use them
+    this->declare_parameter("bounding_box_topic", rclcpp::PARAMETER_STRING);
+    this->declare_parameter("dog_srv_name", rclcpp::PARAMETER_STRING);
+
+    // get config parameters
+    bounding_box_topic_ =  this->get_parameter("bounding_box_topic").as_string();
+    dog_srv_name_ = this->get_parameter("dog_srv_name").as_string();
+
     // create service for letting clients know if a dog is in the camera frame
     dog_in_vision_srv_ = this->create_service<vision::srv::DogInVision>(
-        dog_srv_name, std::bind(&Vision::is_dog_in_vision, this, std::placeholders::_1, std::placeholders::_2)
+        dog_srv_name_, std::bind(&Vision::is_dog_in_vision, this, std::placeholders::_1, std::placeholders::_2)
     );
 
     // create subscriber to bounding box output of darknet_ros 
     bounding_box_sub_ = this->create_subscription<darknet_ros_msgs::msg::BoundingBoxes>(
-        bounding_box_topic, 1, std::bind(&Vision::bounding_box_callback, this, std::placeholders::_1)
+        bounding_box_topic_, 1, std::bind(&Vision::bounding_box_callback, this, std::placeholders::_1)
     );
 }
 

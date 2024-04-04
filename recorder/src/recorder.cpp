@@ -1,20 +1,23 @@
 #include <recorder/recorder.hpp>
 
-Recorder::Recorder(const std::string& camera_topic,
-                   const std::string& record_srv_name) : 
-Node{"recorder_node"}, camera_topic_{camera_topic}, recording_{false}
+Recorder::Recorder() : Node{"recorder_node"}, recording_{false}
 {
+    // declare config parameters to be able to use them
     this->declare_parameter("recording_path", rclcpp::PARAMETER_STRING);
+    this->declare_parameter("camera_topic", rclcpp::PARAMETER_STRING);
+    this->declare_parameter("record_srv_name", rclcpp::PARAMETER_STRING);
 
     // get config parameters
     recording_path_ =  this->get_parameter("recording_path").as_string();
+    camera_topic_ = this->get_parameter("camera_topic").as_string();
+    record_srv_name_ = this->get_parameter("record_srv_name").as_string();
 
     // create the camera feed rosbag writer
     writer_ = std::make_unique<rosbag2_cpp::Writer>();
 
     // create service for control of when to record the camera feed
     record_srv_ = this->create_service<recorder::srv::Record>(
-        record_srv_name, std::bind(&Recorder::record_callback, this, std::placeholders::_1, std::placeholders::_2)
+        record_srv_name_, std::bind(&Recorder::record_callback, this, std::placeholders::_1, std::placeholders::_2)
     );
 
     // create subscriber to camera feed

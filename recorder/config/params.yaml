@@ -1,3 +1,5 @@
 recorder_node:
   ros__parameters:
     recording_path: "recordings/"
+    camera_topic: "/image"
+    record_srv_name: "record"

@@ -9,8 +9,7 @@
 class Recorder : public rclcpp::Node
 {
 public:
-    Recorder(const std::string& camera_topic, 
-             const std::string& record_srv_name);
+    Recorder();
 
 private:
     void camera_callback(const std::shared_ptr<rclcpp::SerializedMessage> msg) const;
@@ -27,6 +26,7 @@ private:
 
 private:
     std::string camera_topic_;  //!< the camera feed topic
+    std::string record_srv_name_;   //!< the record service name
     std::string bag_name_;      //!< current open rosbag's name
     std::string recording_path_;    //!< the root path to store rosbags at
     bool recording_;    //!< if the camera feed is being recorded

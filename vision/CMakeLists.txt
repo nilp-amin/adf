@@ -34,7 +34,13 @@ install(TARGETS vision_node
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY 
-  launch DESTINATION share/${PROJECT_NAME}/
+  launch 
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(DIRECTORY 
+  config
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 rosidl_target_interfaces(vision_node

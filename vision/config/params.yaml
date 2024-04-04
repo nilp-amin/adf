@@ -1,0 +1,4 @@
+vision_node:
+  ros__parameters:
+    bounding_box_topic: "/darknet_ros/bounding_boxes"
+    dog_srv_name: "dog_in_vision"
