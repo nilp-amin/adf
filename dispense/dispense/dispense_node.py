@@ -46,6 +46,10 @@ class DispenseService(Node):
                                  min_pulse_width=min_pulse_width,
                                  max_pulse_width=max_pulse_width)
 
+        # close food and water servo
+        self.food_servo.min()
+        self.water_servo.min()
+
         # setup the ADC to read from load sensors
         self.adc = Adafruit_ADS1x15.ADS1015(address=0x48, busnum=1) 
 

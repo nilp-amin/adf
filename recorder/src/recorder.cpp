@@ -5,12 +5,12 @@ Recorder::Recorder() : Node{"recorder_node"}, recording_{false}
     // declare config parameters to be able to use them
     this->declare_parameter("recording_path", rclcpp::PARAMETER_STRING);
     this->declare_parameter("camera_topic", rclcpp::PARAMETER_STRING);
-    this->declare_parameter("record_srv_name", rclcpp::PARAMETER_STRING);
+    this->declare_parameter("service_name", rclcpp::PARAMETER_STRING);
 
     // get config parameters
     recording_path_ =  this->get_parameter("recording_path").as_string();
     camera_topic_ = this->get_parameter("camera_topic").as_string();
-    record_srv_name_ = this->get_parameter("record_srv_name").as_string();
+    record_srv_name_ = this->get_parameter("service_name").as_string();
 
     // create the camera feed rosbag writer
     writer_ = std::make_unique<rosbag2_cpp::Writer>();

@@ -119,6 +119,17 @@ class TaskManager(Node):
     def __init__(self) -> None:
         super().__init__("task_manager_node")
 
+        # decalre config parameters to be used
+        # self.declare_parameters(
+        #     namespace="",
+        #     parameters=[
+        #         ("food_servo_pin", 13),
+        #         ("service_name", "/dispense"),
+        #         ("food_full_threshold", 1000),
+        #         ("water_full_threshold", 1000)
+        #     ]
+        # )
+
         # create the root FSM
         sm = StateMachine(outcomes=["succeeded", "aborted", "preempted"])
 

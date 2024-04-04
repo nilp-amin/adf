@@ -4,12 +4,12 @@ Vision::Vision() : Node("vision_node"), dog_in_vision_{false}
 {
     // declare config parameters to be able to use them
     this->declare_parameter("bounding_box_topic", rclcpp::PARAMETER_STRING);
-    this->declare_parameter("dog_srv_name", rclcpp::PARAMETER_STRING);
+    this->declare_parameter("service_name", rclcpp::PARAMETER_STRING);
     this->declare_parameter("class_id", rclcpp::PARAMETER_STRING);
 
     // get config parameters
     bounding_box_topic_ =  this->get_parameter("bounding_box_topic").as_string();
-    dog_srv_name_ = this->get_parameter("dog_srv_name").as_string();
+    dog_srv_name_ = this->get_parameter("service_name").as_string();
     class_id_ = this->get_parameter("class_id").as_string();
 
     // create service for letting clients know if a dog is in the camera frame
