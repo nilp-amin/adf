@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-04T09:39:46.144Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="NT_e6Hem69EqTfNWaBLZ" version="24.2.1" type="device">
+<mxfile host="app.diagrams.net" modified="2024-04-04T11:04:16.600Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="-jNIthsTBIZHzWIP4wpw" version="24.2.1" type="device">
   <diagram name="Page-1" id="9Xf1JJKaoTDQQPh1tQwb">
-    <mxGraphModel dx="3427" dy="2353" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1762" dy="1279" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -291,6 +291,51 @@
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-79" value="Stop recording camera feed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
           <mxGeometry x="185" y="1560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-107" value="Raspberry Pi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="1080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-108" target="dyJRUW8BcSIrCMlU8a8Q-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-108" value="ADC" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1195" y="1020" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-109" target="dyJRUW8BcSIrCMlU8a8Q-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-109" value="Food Load Cell" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="940" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-111" target="dyJRUW8BcSIrCMlU8a8Q-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-111" value="Water Load Cell" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="940" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-115" target="dyJRUW8BcSIrCMlU8a8Q-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-115" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="1095" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-118" target="dyJRUW8BcSIrCMlU8a8Q-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-118" value="PIR sensor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="1095" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-120" target="dyJRUW8BcSIrCMlU8a8Q-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-120" value="Food Servo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="1205" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-121" target="dyJRUW8BcSIrCMlU8a8Q-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-121" value="Water Servo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="1205" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

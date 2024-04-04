@@ -121,6 +121,14 @@ A list of the required hardware is provided below. Some parts of the software ha
 5. [Load cells](https://www.adafruit.com/product/1075) (x2)
 6. PIR sensor (x1)
 
+# Systems Diagram
+The main hardware is shown as a systems diagram below. Miscallanous items such as power suppled are not shown, and assumed to be present.
+
+<p align="center">
+  <img src="./systems_diagram.png" width="65%" />
+</p>
+
+
 # Testing
 A variety of testing needs to occur for this software. A variety of tests are detailed below.
 
