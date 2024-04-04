@@ -25,6 +25,7 @@ private:
 private:
     std::string bounding_box_topic_;    //!< the topic name for darknet_ros bounding boxes
     std::string dog_srv_name_;      //!< the dog in vision service name
+    std::string class_id_;     //!< the class id to look for in bounding boxes
     bool dog_in_vision_;     //!< is a dog in the vision of the camera
 };
 

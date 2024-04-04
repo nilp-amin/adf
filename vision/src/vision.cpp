@@ -5,10 +5,12 @@ Vision::Vision() : Node("vision_node"), dog_in_vision_{false}
     // declare config parameters to be able to use them
     this->declare_parameter("bounding_box_topic", rclcpp::PARAMETER_STRING);
     this->declare_parameter("dog_srv_name", rclcpp::PARAMETER_STRING);
+    this->declare_parameter("class_id", rclcpp::PARAMETER_STRING);
 
     // get config parameters
     bounding_box_topic_ =  this->get_parameter("bounding_box_topic").as_string();
     dog_srv_name_ = this->get_parameter("dog_srv_name").as_string();
+    class_id_ = this->get_parameter("class_id").as_string();
 
     // create service for letting clients know if a dog is in the camera frame
     dog_in_vision_srv_ = this->create_service<vision::srv::DogInVision>(
@@ -26,7 +28,7 @@ void Vision::bounding_box_callback(const darknet_ros_msgs::msg::BoundingBoxes& m
     // check if a dog is detected in the camera frame by darknet_ros
     dog_in_vision_ = false;
     for (auto bb : msg.bounding_boxes) {
-        if (bb.class_id == "dog") {
+        if (bb.class_id == class_id_) {
             dog_in_vision_ = true;
             break;
         }
