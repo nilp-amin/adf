@@ -16,7 +16,7 @@ Recorder::Recorder() : Node{"recorder_node"}, recording_{false}
     writer_ = std::make_unique<rosbag2_cpp::Writer>();
 
     // create service for control of when to record the camera feed
-    record_srv_ = this->create_service<recorder::srv::Record>(
+    record_srv_ = this->create_service<adf_interfaces::srv::Record>(
         record_srv_name_, std::bind(&Recorder::record_callback, this, std::placeholders::_1, std::placeholders::_2)
     );
 
@@ -36,8 +36,8 @@ void Recorder::camera_callback(const std::shared_ptr<rclcpp::SerializedMessage> 
     }
 }
 
-void Recorder::record_callback(const std::shared_ptr<recorder::srv::Record::Request> request,
-                               const std::shared_ptr<recorder::srv::Record::Response> response)
+void Recorder::record_callback(const std::shared_ptr<adf_interfaces::srv::Record::Request> request,
+                               const std::shared_ptr<adf_interfaces::srv::Record::Response> response)
 {
     if (recording_ == false && request->record == true)
     {

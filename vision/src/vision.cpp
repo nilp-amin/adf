@@ -13,7 +13,7 @@ Vision::Vision() : Node("vision_node"), dog_in_vision_{false}
     class_id_ = this->get_parameter("class_id").as_string();
 
     // create service for letting clients know if a dog is in the camera frame
-    dog_in_vision_srv_ = this->create_service<vision::srv::DogInVision>(
+    dog_in_vision_srv_ = this->create_service<adf_interfaces::srv::DogInVision>(
         dog_srv_name_, std::bind(&Vision::is_dog_in_vision, this, std::placeholders::_1, std::placeholders::_2)
     );
 
@@ -36,8 +36,8 @@ void Vision::bounding_box_callback(const darknet_ros_msgs::msg::BoundingBoxes& m
     RCLCPP_INFO(this->get_logger(), "is dog in vision: %s", dog_in_vision_ ? "true" : "false");
 } 
 
-void Vision::is_dog_in_vision(const std::shared_ptr<vision::srv::DogInVision::Request> request,
-                              const std::shared_ptr<vision::srv::DogInVision::Response> response)
+void Vision::is_dog_in_vision(const std::shared_ptr<adf_interfaces::srv::DogInVision::Request> request,
+                              const std::shared_ptr<adf_interfaces::srv::DogInVision::Response> response)
 {
     response->dog_in_vision = dog_in_vision_;
 }

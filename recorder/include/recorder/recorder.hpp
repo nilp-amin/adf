@@ -4,7 +4,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/image.hpp>
 #include <rosbag2_cpp/writer.hpp>
-#include <recorder/srv/record.hpp>
+#include <adf_interfaces/srv/record.hpp>
 
 class Recorder : public rclcpp::Node
 {
@@ -14,13 +14,13 @@ public:
 private:
     void camera_callback(const std::shared_ptr<rclcpp::SerializedMessage> msg) const;
 
-    void record_callback(const std::shared_ptr<recorder::srv::Record::Request> request,
-                         const std::shared_ptr<recorder::srv::Record::Response> response);
+    void record_callback(const std::shared_ptr<adf_interfaces::srv::Record::Request> request,
+                         const std::shared_ptr<adf_interfaces::srv::Record::Response> response);
 
 private:
     std::unique_ptr<rosbag2_cpp::Writer> writer_;   //!< the rosbag writer for the camera feed
 
-    rclcpp::Service<recorder::srv::Record>::SharedPtr record_srv_;    //!< service which controls if to record camera feed or not 
+    rclcpp::Service<adf_interfaces::srv::Record>::SharedPtr record_srv_;    //!< service which controls if to record camera feed or not 
 
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr camera_sub_;   //!< sub for camera feed
 

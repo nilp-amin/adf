@@ -9,11 +9,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(darknet_ros_msgs REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+find_package(adf_interfaces REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/DogInVision.srv"
-)
 add_executable(vision_node 
   src/vision_node.cpp
   src/vision.cpp 
@@ -23,6 +20,7 @@ ament_target_dependencies(vision_node
   rclcpp 
   sensor_msgs
   darknet_ros_msgs
+  adf_interfaces
 )
 target_include_directories(vision_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -43,9 +41,6 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}/
 )
 
-rosidl_target_interfaces(vision_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
-
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -59,5 +54,4 @@ if(BUILD_TESTING)
 endif()
 
 ament_export_include_directories(include)
-ament_export_dependencies(rosidl_default_runtime)
 ament_package()

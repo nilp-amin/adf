@@ -3,9 +3,11 @@
 <package format="3">
   <name>proximity</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="s4581164@student.uq.edu.au">nilp</maintainer>
-  <license>Apache-2.0</license>
+  <description>Used to check if motion is detected in ADF</description>
+  <maintainer email="nilpamin2@gmail.com">nilp</maintainer>
+  <license>Apache License 2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
