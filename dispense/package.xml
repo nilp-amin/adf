@@ -3,9 +3,14 @@
 <package format="3">
   <name>dispense</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="s4581164@student.uq.edu.au">nilp</maintainer>
-  <license>Apache-2.0</license>
+  <description>Used to dispense food and water for the ADF</description>
+  <maintainer email="nilpamin2@gmail.com">nilp</maintainer>
+  <license>Apache License 2.0</license>
+
+  <build_depend>std_srvs</build_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

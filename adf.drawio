@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-04T03:26:19.607Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="GnGocmeLruOAzKR2DWgq" version="24.2.1" type="device">
+<mxfile host="app.diagrams.net" modified="2024-04-04T05:51:28.499Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="30rxN5RMf7u7n5-GeHRK" version="24.2.1" type="device">
   <diagram name="Page-1" id="9Xf1JJKaoTDQQPh1tQwb">
     <mxGraphModel dx="1762" dy="1279" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -38,10 +38,13 @@
           <mxGeometry x="5" y="30" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-24" value="&lt;b&gt;External Library:&lt;/b&gt;&lt;div&gt;- gpiozero&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-3">
-          <mxGeometry x="5" y="70" width="120" height="40" as="geometry" />
+          <mxGeometry y="120" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-25" value="&lt;b&gt;Service:&lt;/b&gt;&lt;div&gt;- Feed (open and close servo for dispensing food and water so it is full)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-3">
-          <mxGeometry x="5" y="120" width="345" height="30" as="geometry" />
+          <mxGeometry y="170" width="345" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-106" value="&lt;b&gt;External Boards:&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Adafruit ADC&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-3">
+          <mxGeometry x="2.5" y="81" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-4" value="Task Manager Node" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="170" y="-200" width="350" height="250" as="geometry" />

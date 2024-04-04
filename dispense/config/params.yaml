@@ -1,0 +1,12 @@
+dispense_node:
+  ros__parameters:
+    food_servo_pin: 13
+    water_servo_pin: 18
+    food_adc_pin: 0
+    water_adc_pin: 1 
+    adc_gain: 1
+    min_pulse_width: 0.001
+    max_pulse_width: 0.002
+    food_full_threshold: 1000       # the ADC threshold for a full bowl of food
+    water_full_threshold: 1000      # the ADC threshold for a full bowl of water
+    service_name: "dispense"
