@@ -33,7 +33,15 @@ target_compile_features(recorder_node PUBLIC c_std_99 cxx_std_17)  # Require C99
 install(TARGETS recorder_node
   DESTINATION lib/${PROJECT_NAME})
 
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
+install(DIRECTORY 
+  launch 
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(DIRECTORY 
+  config
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 rosidl_target_interfaces(recorder_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")

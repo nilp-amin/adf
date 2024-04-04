@@ -4,6 +4,11 @@ Recorder::Recorder(const std::string& camera_topic,
                    const std::string& record_srv_name) : 
 Node{"recorder_node"}, camera_topic_{camera_topic}, recording_{false}
 {
+    this->declare_parameter("recording_path", rclcpp::PARAMETER_STRING);
+
+    // get config parameters
+    recording_path_ =  this->get_parameter("recording_path").as_string();
+
     // create the camera feed rosbag writer
     writer_ = std::make_unique<rosbag2_cpp::Writer>();
 
@@ -36,7 +41,7 @@ void Recorder::record_callback(const std::shared_ptr<recorder::srv::Record::Requ
         // open new rosbag for recording
         bag_name_ = 
             "bag_" + std::to_string(this->now().nanoseconds()) + ".bag";
-        writer_->open("recordings/" + bag_name_);
+        writer_->open(recording_path_ + bag_name_);
 
         recording_ = request->record;
         RCLCPP_INFO(this->get_logger(), "Opened ros bag with name: %s", bag_name_.c_str());

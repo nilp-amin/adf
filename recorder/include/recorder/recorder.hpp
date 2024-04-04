@@ -27,7 +27,8 @@ private:
 
 private:
     std::string camera_topic_;  //!< the camera feed topic
-    std::string bag_name_;      //!< current open ros bag's name
+    std::string bag_name_;      //!< current open rosbag's name
+    std::string recording_path_;    //!< the root path to store rosbags at
     bool recording_;    //!< if the camera feed is being recorded
 };
 

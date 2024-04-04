@@ -33,7 +33,9 @@ target_compile_features(vision_node PUBLIC c_std_99 cxx_std_17)  # Require C99 a
 install(TARGETS vision_node
   DESTINATION lib/${PROJECT_NAME})
 
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
+install(DIRECTORY 
+  launch DESTINATION share/${PROJECT_NAME}/
+)
 
 rosidl_target_interfaces(vision_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")

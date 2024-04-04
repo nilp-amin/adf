@@ -1,0 +1,3 @@
+recorder_node:
+  ros__parameters:
+    recording_path: "recordings/"
