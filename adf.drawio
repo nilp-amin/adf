@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-04T05:51:28.499Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="30rxN5RMf7u7n5-GeHRK" version="24.2.1" type="device">
+<mxfile host="app.diagrams.net" modified="2024-04-04T08:13:57.839Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="3_Dc1Hz8yL2luF5yj5Oj" version="24.2.1" type="device">
   <diagram name="Page-1" id="9Xf1JJKaoTDQQPh1tQwb">
     <mxGraphModel dx="1762" dy="1279" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -205,8 +205,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-72" target="dyJRUW8BcSIrCMlU8a8Q-76">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-72" target="dyJRUW8BcSIrCMlU8a8Q-79">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="2270" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-72" value="Dog?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="305" y="2150" width="80" height="80" as="geometry" />
@@ -214,25 +216,16 @@
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-75" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="360" y="2160" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-76" target="dyJRUW8BcSIrCMlU8a8Q-79">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-76" value="Wait 5s" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="285" y="2270" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-78" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="330" y="2220" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dyJRUW8BcSIrCMlU8a8Q-79" target="dyJRUW8BcSIrCMlU8a8Q-30">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="240" y="2410" />
+              <mxPoint x="240" y="2330" />
               <mxPoint x="240" y="880" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-79" value="Stop recording camera feed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="285" y="2380" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-82" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="830" width="350" height="230" as="geometry">
@@ -278,7 +271,7 @@
           <mxGeometry y="20" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-100" value="" style="swimlane;startSize=0;dashed=1;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
-          <mxGeometry x="30" y="1620" width="400" height="100" as="geometry">
+          <mxGeometry x="30" y="1540" width="400" height="100" as="geometry">
             <mxRectangle x="160" y="830" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -295,6 +288,9 @@
         </mxCell>
         <mxCell id="dyJRUW8BcSIrCMlU8a8Q-43" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
           <mxGeometry x="230" y="510" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dyJRUW8BcSIrCMlU8a8Q-79" value="Stop recording camera feed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dyJRUW8BcSIrCMlU8a8Q-95">
+          <mxGeometry x="185" y="1560" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

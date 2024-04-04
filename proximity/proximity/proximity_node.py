@@ -14,7 +14,7 @@ class ProximityService(Node):
             parameters=[
                 ("pir_pin", 4),
                 ("pir_threshold", 0.5),
-                ("service_name", "motion")
+                ("service_name", "/motion")
             ]
         )
 

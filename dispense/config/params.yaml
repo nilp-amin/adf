@@ -9,4 +9,4 @@ dispense_node:
     max_pulse_width: 0.002
     food_full_threshold: 1000       # the ADC threshold for a full bowl of food
     water_full_threshold: 1000      # the ADC threshold for a full bowl of water
-    service_name: "dispense"
+    service_name: "/dispense"

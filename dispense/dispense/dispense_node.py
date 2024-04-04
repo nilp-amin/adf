@@ -20,7 +20,7 @@ class DispenseService(Node):
                 ("adc_gain", 1),
                 ("min_pulse_width", 0.001),
                 ("max_pulse_width", 0.002),
-                ("service_name", "dispense"),
+                ("service_name", "/dispense"),
                 ("food_full_threshold", 1000),
                 ("water_full_threshold", 1000)
             ]
