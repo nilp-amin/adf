@@ -1,5 +1,5 @@
 proximity_node:
   ros__parameters:
-    pir_pin: 4
-    pir_threshold: 0.5
-    service_name: "/motion"
+    pir_pin: 4                  # the GPIO pin which is used for the PIR sensor
+    pir_threshold: 0.5          # the PIR sensor threshold which determins if motion is detected
+    service_name: "/motion"     # the exposed service name

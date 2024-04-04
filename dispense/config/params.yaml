@@ -1,12 +1,12 @@
 dispense_node:
   ros__parameters:
-    food_servo_pin: 13
-    water_servo_pin: 18
-    food_adc_pin: 0
-    water_adc_pin: 1 
-    adc_gain: 1
-    min_pulse_width: 0.001
-    max_pulse_width: 0.002
+    food_servo_pin: 13              # the PWM pin which controls the food servo
+    water_servo_pin: 18             # the PWM pin which controls the water servo
+    food_adc_pin: 0                 # the pin on the ADC which is connected to the food loac cell
+    water_adc_pin: 1                # the pin on the ADC which is connected to the water load cell
+    adc_gain: 1                     # the gain to use for the ADC
+    min_pulse_width: 0.001          # the servo minimum pulse width
+    max_pulse_width: 0.002          # the servo maximum pulse width
     food_full_threshold: 1000       # the ADC threshold for a full bowl of food
     water_full_threshold: 1000      # the ADC threshold for a full bowl of water
-    service_name: "/dispense"
+    service_name: "/dispense"       # the exposed service name

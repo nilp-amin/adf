@@ -1,5 +1,5 @@
 recorder_node:
   ros__parameters:
-    recording_path: "recordings/"
-    camera_topic: "/image"
-    service_name: "/record"
+    recording_path: "recordings/"         # the path to where to store recorded rosbags
+    camera_topic: "/image"                # the camera feed topic name
+    service_name: "/record"               # the exposed service name
