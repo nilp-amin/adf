@@ -3,7 +3,7 @@
 <package format="3">
   <name>vision</name>
   <version>0.0.0</version>
-  <description>Used as part of the Automatic Dog Feeder</description>
+  <description>Used to check if a dog is in the camera feed</description>
   <maintainer email="nilpamin2@gmail.com">nilp</maintainer>
   <license>Apache License 2.0</license>
 

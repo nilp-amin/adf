@@ -9,7 +9,12 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(rosbag2_cpp REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/Record.srv"
+)
 add_executable(recorder_node 
   src/recorder_node.cpp
   src/recorder.cpp
@@ -18,6 +23,7 @@ add_executable(recorder_node
 ament_target_dependencies(recorder_node 
   rclcpp 
   sensor_msgs
+  rosbag2_cpp
 )
 target_include_directories(recorder_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -26,6 +32,11 @@ target_compile_features(recorder_node PUBLIC c_std_99 cxx_std_17)  # Require C99
 
 install(TARGETS recorder_node
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
+
+rosidl_target_interfaces(recorder_node
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -40,4 +51,5 @@ if(BUILD_TESTING)
 endif()
 
 ament_export_include_directories(include)
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()

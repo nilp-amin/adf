@@ -33,6 +33,8 @@ target_compile_features(vision_node PUBLIC c_std_99 cxx_std_17)  # Require C99 a
 install(TARGETS vision_node
   DESTINATION lib/${PROJECT_NAME})
 
+install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
+
 rosidl_target_interfaces(vision_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
@@ -47,8 +49,6 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
 
 ament_export_include_directories(include)
 ament_export_dependencies(rosidl_default_runtime)

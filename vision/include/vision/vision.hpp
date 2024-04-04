@@ -3,12 +3,13 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <darknet_ros_msgs/msg/bounding_boxes.hpp>
-#include "vision/srv/dog_in_vision.hpp"
+#include <vision/srv/dog_in_vision.hpp>
 
 class Vision : public rclcpp::Node
 {
 public:
-    Vision(const std::string& bounding_box_topic, const std::string& dog_srv_name);
+    Vision(const std::string& bounding_box_topic, 
+           const std::string& dog_srv_name);
 
 private:
     void bounding_box_callback(const darknet_ros_msgs::msg::BoundingBoxes& msg);   //!< the bounding boxes callback
